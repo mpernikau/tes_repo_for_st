@@ -83,11 +83,4 @@ class BasePage():
             EC.element_to_be_clickable(BasePageLocators.BASKET_BUTTON))
         button.click()
 
-    def text_element_present(self, CSS_SELECTOR, basket_button):
-        try:
-            self.browser.find_element(By.CSS_SELECTOR, basket_button)
-        except (NoSuchElementException):
-            return False
-
-        return True
 

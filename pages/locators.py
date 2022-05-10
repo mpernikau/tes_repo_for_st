@@ -22,3 +22,4 @@ class ProductPageLocators():
 class BasketPageLocators():
     TEXT_BASKET_EMPTY = (By.CSS_SELECTOR, "#content_inner a")
     ITEMS_LIST = (By.CLASS_NAME, 'basket-items')
+
