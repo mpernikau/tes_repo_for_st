@@ -6,7 +6,6 @@ from selenium.common.exceptions import TimeoutException
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 from .locators import BasePageLocators
-from .locators import BasketPageLocators
 
 class BasePage():
     def __init__(self, browser, url, timeout=10):  #Конструктор — метод, который вызывается, когда мы создаем объект. Конструктор объявляется ключевым словом __init__
@@ -83,4 +82,6 @@ class BasePage():
             EC.element_to_be_clickable(BasePageLocators.BASKET_BUTTON))
         button.click()
 
-
+    def should_be_authorized_user(self):
+        assert self.is_element_present(*BasePageLocators.USER_ICON), "User icon is not presented," \
+                                                                     " probably unauthorised user"
