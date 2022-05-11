@@ -1,6 +1,6 @@
 from .base_page import BasePage
 from .locators import LoginPageLocators
-import random
+
 
 
 class LoginPage(BasePage):
